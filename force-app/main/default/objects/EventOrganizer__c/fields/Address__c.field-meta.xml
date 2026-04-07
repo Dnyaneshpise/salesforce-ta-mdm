@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>Address__c</fullName>
+    <type>Lookup</type>
+    <referenceTo>Location__c</referenceTo>
+    <relationshipLabel>Event Organizers</relationshipLabel>
+    <relationshipName>Event_Organizers</relationshipName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <required>false</required>
+    <label>Address</label>
+    <securityClassification>Public</securityClassification>
+</CustomField>

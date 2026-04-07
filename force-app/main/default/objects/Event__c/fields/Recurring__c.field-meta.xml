@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is this a recurring event?</description>
+    <inlineHelpText>Check if the event repeats</inlineHelpText>
+    <label>Recurring?</label>
+    <securityClassification>Public</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

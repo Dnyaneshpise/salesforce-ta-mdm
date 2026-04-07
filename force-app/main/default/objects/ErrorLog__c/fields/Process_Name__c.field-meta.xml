@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>Process_Name__c</fullName>
+    <type>Text</type>
+    <length>255</length>
+    <required>true</required>
+    <label>Process Name</label>
+    <securityClassification>Public</securityClassification>
+</CustomField>

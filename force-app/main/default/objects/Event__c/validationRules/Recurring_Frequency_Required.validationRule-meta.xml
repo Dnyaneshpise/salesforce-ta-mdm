@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring_Frequency_Required</fullName>
+    <active>true</active>
+    <description>Recurring events must have a frequency selected.</description>
+    <errorConditionFormula>AND(Recurring__c = true, ISBLANK(Frequency__c))</errorConditionFormula>
+    <errorDisplayField>Frequency__c</errorDisplayField>
+    <errorMessage>Please select a frequency (Daily or Weekly) for this recurring event.</errorMessage>
+</ValidationRule>

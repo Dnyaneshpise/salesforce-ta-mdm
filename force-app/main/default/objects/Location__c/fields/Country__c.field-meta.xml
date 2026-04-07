@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>Country__c</fullName>
+    <type>Picklist</type>
+    <required>false</required>
+    <label>Country</label>
+    <valueSet>
+        <valueSetDefinition>
+            <value>
+                <fullName>USA</fullName>
+                <label>USA</label>
+                <default>true</default>
+            </value>
+            <value>
+                <fullName>Canada</fullName>
+                <label>Canada</label>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>UK</fullName>
+                <label>UK</label>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <label>India</label>
+                <default>false</default>
+            </value>
+            <sorted>true</sorted>
+        </valueSetDefinition>
+    </valueSet>
+    <securityClassification>Public</securityClassification>
+</CustomField>

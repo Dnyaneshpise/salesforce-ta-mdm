@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>Attendee__c</fullName>
+    <type>MasterDetail</type>
+    <referenceTo>Attendee__c</referenceTo>
+    <relationshipLabel>Event Attendees (Attendee)</relationshipLabel>
+    <relationshipName>Event_Attendees_Attendee</relationshipName>
+    <label>Attendee</label>
+    <securityClassification>Public</securityClassification>
+</CustomField>

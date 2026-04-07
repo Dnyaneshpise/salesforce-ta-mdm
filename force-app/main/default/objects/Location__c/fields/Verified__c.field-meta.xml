@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>Verified__c</fullName>
+    <type>Checkbox</type>
+    <defaultValue>false</defaultValue>
+    <required>false</required>
+    <label>Verified</label>
+    <securityClassification>Public</securityClassification>
+</CustomField>

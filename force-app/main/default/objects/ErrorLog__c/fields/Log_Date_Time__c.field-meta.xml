@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>Log_Date_Time__c</fullName>
+    <type>DateTime</type>
+    <required>true</required>
+    <label>Log Date/Time</label>
+    <securityClassification>Public</securityClassification>
+</CustomField>

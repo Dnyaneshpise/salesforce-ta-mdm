@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>Speaker__c</fullName>
+    <type>MasterDetail</type>
+    <referenceTo>Speaker__c</referenceTo>
+    <relationshipLabel>Event Speakers (Speaker)</relationshipLabel>
+    <relationshipName>Event_Speakers_Speaker</relationshipName>
+    <label>Speaker</label>
+    <securityClassification>Public</securityClassification>
+</CustomField>
