@@ -3,7 +3,7 @@
     <fullName>Recurring_Frequency_Required</fullName>
     <active>true</active>
     <description>Recurring events must have a frequency selected.</description>
-    <errorConditionFormula>AND(Recurring__c = true, ISBLANK(Frequency__c))</errorConditionFormula>
+    <errorConditionFormula>AND(Recurring__c = true, ISPICKVAL(Frequency__c, ""))</errorConditionFormula>
     <errorDisplayField>Frequency__c</errorDisplayField>
     <errorMessage>Please select a frequency (Daily or Weekly) for this recurring event.</errorMessage>
 </ValidationRule>

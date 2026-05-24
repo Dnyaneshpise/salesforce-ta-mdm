@@ -3,7 +3,7 @@
     <fullName>InPerson_Location_Required</fullName>
     <active>true</active>
     <description>In-person events require a location.</description>
-    <errorConditionFormula>ISPICKVAL(Event_Type__c, "In-Person") && ISBLANK(Location__c)</errorConditionFormula>
+    <errorConditionFormula>ISPICKVAL(EventType__c, "In-Person") &amp;&amp; ISBLANK(Location__c)</errorConditionFormula>
     <errorDisplayField>Location__c</errorDisplayField>
     <errorMessage>In-person events require a location. Please select a location.</errorMessage>
 </ValidationRule>

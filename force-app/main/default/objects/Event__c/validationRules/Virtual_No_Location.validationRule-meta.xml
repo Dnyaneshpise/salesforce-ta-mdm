@@ -3,7 +3,7 @@
     <fullName>Virtual_No_Location</fullName>
     <active>true</active>
     <description>Virtual events cannot have a location selected.</description>
-    <errorConditionFormula>ISPICKVAL(Event_Type__c, "Virtual") && NOT(ISBLANK(Location__c))</errorConditionFormula>
+    <errorConditionFormula>ISPICKVAL(EventType__c, "Virtual") &amp;&amp; NOT(ISBLANK(Location__c))</errorConditionFormula>
     <errorDisplayField>Location__c</errorDisplayField>
     <errorMessage>Virtual events cannot have a location. Please clear the location field.</errorMessage>
 </ValidationRule>
