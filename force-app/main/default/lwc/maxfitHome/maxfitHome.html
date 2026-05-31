@@ -1,0 +1,141 @@
+<template>
+    <section class="shell">
+        <div class="hero">
+            <div>
+                <p class="eyebrow">MAXFIT</p>
+                <h1>Event operations workspace</h1>
+                <p class="subtext">Create events, manage people, and connect attendees and speakers from one place.</p>
+            </div>
+            <div class="actions">
+                <lightning-button label="Events" icon-name="standard:event" onclick={openEvents}></lightning-button>
+                <lightning-button label="Attendees" icon-name="standard:people" onclick={openAttendees}></lightning-button>
+                <lightning-button label="Speakers" icon-name="standard:lead" onclick={openSpeakers}></lightning-button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <article>
+                <span>1</span>
+                <p>Create event</p>
+            </article>
+            <article>
+                <span>2</span>
+                <p>Add attendees</p>
+            </article>
+            <article>
+                <span>3</span>
+                <p>Assign speakers</p>
+            </article>
+            <article>
+                <span>4</span>
+                <p>Track locations</p>
+            </article>
+        </div>
+
+        <lightning-tabset variant="scoped">
+            <lightning-tab label="Create Event" icon-name="standard:event">
+                <div class="panel">
+                    <lightning-record-edit-form object-api-name="Event__c" onsuccess={handleSuccess}>
+                        <lightning-messages></lightning-messages>
+                        <div class="grid">
+                            <lightning-input-field field-name="Name__c"></lightning-input-field>
+                            <lightning-input-field field-name="Status__c"></lightning-input-field>
+                            <lightning-input-field field-name="EventType__c" value="Virtual"></lightning-input-field>
+                            <lightning-input-field field-name="MaxSeats__c"></lightning-input-field>
+                            <lightning-input-field field-name="Start_Date_Time__c"></lightning-input-field>
+                            <lightning-input-field field-name="End_Date_Time__c"></lightning-input-field>
+                            <lightning-input-field field-name="Organizer__c"></lightning-input-field>
+                            <lightning-input-field field-name="Location__c"></lightning-input-field>
+                            <lightning-input-field field-name="Recurring__c"></lightning-input-field>
+                            <lightning-input-field field-name="Frequency__c"></lightning-input-field>
+                            <lightning-input-field field-name="Live__c"></lightning-input-field>
+                        </div>
+                        <div class="form-actions">
+                            <lightning-button type="submit" variant="brand" label="Save Event"></lightning-button>
+                        </div>
+                    </lightning-record-edit-form>
+                </div>
+            </lightning-tab>
+
+            <lightning-tab label="Register Attendee" icon-name="standard:people">
+                <div class="panel">
+                    <lightning-record-edit-form object-api-name="Attendee__c" onsuccess={handleSuccess}>
+                        <lightning-messages></lightning-messages>
+                        <div class="grid">
+                            <lightning-input-field field-name="Email__c"></lightning-input-field>
+                            <lightning-input-field field-name="Phone__c"></lightning-input-field>
+                            <lightning-input-field field-name="Company_Name__c"></lightning-input-field>
+                            <lightning-input-field field-name="Address__c"></lightning-input-field>
+                        </div>
+                        <div class="form-actions">
+                            <lightning-button type="submit" variant="brand" label="Save Attendee"></lightning-button>
+                        </div>
+                    </lightning-record-edit-form>
+                </div>
+            </lightning-tab>
+
+            <lightning-tab label="Add Speaker" icon-name="standard:lead">
+                <div class="panel">
+                    <lightning-record-edit-form object-api-name="Speaker__c" onsuccess={handleSuccess}>
+                        <lightning-messages></lightning-messages>
+                        <div class="grid">
+                            <lightning-input-field field-name="Email__c"></lightning-input-field>
+                            <lightning-input-field field-name="Phone__c"></lightning-input-field>
+                            <lightning-input-field field-name="Company__c"></lightning-input-field>
+                        </div>
+                        <div class="form-actions">
+                            <lightning-button type="submit" variant="brand" label="Save Speaker"></lightning-button>
+                        </div>
+                    </lightning-record-edit-form>
+                </div>
+            </lightning-tab>
+
+            <lightning-tab label="Location" icon-name="standard:location">
+                <div class="panel">
+                    <lightning-record-edit-form object-api-name="Location__c" onsuccess={handleSuccess}>
+                        <lightning-messages></lightning-messages>
+                        <div class="grid">
+                            <lightning-input-field field-name="Street__c"></lightning-input-field>
+                            <lightning-input-field field-name="City__c"></lightning-input-field>
+                            <lightning-input-field field-name="State__c"></lightning-input-field>
+                            <lightning-input-field field-name="Postal_Code__c"></lightning-input-field>
+                            <lightning-input-field field-name="Country__c"></lightning-input-field>
+                            <lightning-input-field field-name="Landmark__c"></lightning-input-field>
+                            <lightning-input-field field-name="Verified__c"></lightning-input-field>
+                        </div>
+                        <div class="form-actions">
+                            <lightning-button type="submit" variant="brand" label="Save Location"></lightning-button>
+                        </div>
+                    </lightning-record-edit-form>
+                </div>
+            </lightning-tab>
+
+            <lightning-tab label="Event Links" icon-name="standard:relationship">
+                <div class="split">
+                    <div class="panel">
+                        <h2>Attach attendee</h2>
+                        <lightning-record-edit-form object-api-name="EventAttendee__c" onsuccess={handleSuccess}>
+                            <lightning-messages></lightning-messages>
+                            <lightning-input-field field-name="Event__c"></lightning-input-field>
+                            <lightning-input-field field-name="Attendee__c"></lightning-input-field>
+                            <div class="form-actions">
+                                <lightning-button type="submit" variant="brand" label="Save Event Attendee"></lightning-button>
+                            </div>
+                        </lightning-record-edit-form>
+                    </div>
+                    <div class="panel">
+                        <h2>Attach speaker</h2>
+                        <lightning-record-edit-form object-api-name="EventSpeaker__c" onsuccess={handleSuccess}>
+                            <lightning-messages></lightning-messages>
+                            <lightning-input-field field-name="Event__c"></lightning-input-field>
+                            <lightning-input-field field-name="Speaker__c"></lightning-input-field>
+                            <div class="form-actions">
+                                <lightning-button type="submit" variant="brand" label="Save Event Speaker"></lightning-button>
+                            </div>
+                        </lightning-record-edit-form>
+                    </div>
+                </div>
+            </lightning-tab>
+        </lightning-tabset>
+    </section>
+</template>
